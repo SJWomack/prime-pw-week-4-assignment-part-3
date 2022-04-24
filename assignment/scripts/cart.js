@@ -20,13 +20,21 @@ function listItems() {
 
 listItems()  //checking if correct listing of items
 
-function empty(){
-    while (basket.length > 0){
+function empty() {
+    while (basket.length > 0) {
         basket.pop();
-        return 'emptied'
+      
     }
 }
 
 empty(); //emptied basket
 console.log(basket);  //checking if items are gone
 
+//doing some more tests
+addItem('blueberries');
+addItem('milk');
+addItem('eggs')
+console.log(basket);
+listItems();
+empty()
+console.log(basket)
