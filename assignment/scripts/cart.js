@@ -6,12 +6,12 @@ let basket = [];
 const maxItems = 5;
 
 function addItem(item) {
-    if (isFull(basket) === 'true') {
-        return 'false';
+    if (isFull(basket)) {
+        return false;
     }
     else {
         basket.push(item);
-        return 'true';
+        return true;
     }
 }
 
@@ -47,11 +47,9 @@ console.log(basket);            //expect cheese not to be added
 
 function isFull() {
     if (basket.length >= maxItems) {
-        return 'true';
+        return true;
     }
-    else {
-        return 'false';
-    }
+    return false;
 }
 
 function removeItem(item) {
@@ -61,10 +59,10 @@ function removeItem(item) {
             return item;
         }
     }
-    return 'null';
+    return null;
 }
 
-//test runs
+// //test runs
 console.log(`removing milk, expect return milk: ${removeItem('milk')}`);
 console.log(basket);
 console.log(`removing bananas, expect return null: ${removeItem('bananas')}`)
