@@ -21,7 +21,7 @@ addItem('pudding');
 addItem('soda');
 
 function listItems() {
-    for (let i=0; i<basket.length; i++) {
+    for (let i = 0; i < basket.length; i++) {
         console.log(` ${basket[i]}: currently in your cart`);
     }
 }
@@ -55,11 +55,10 @@ function isFull() {
 }
 
 function removeItem(item) {
-    for (let items of basket) {
-        if (basket.indexOf(item) >= 0) {
-            basket.splice(basket.indexOf(item), 1);
-            return item;
-        }
+
+    if (basket.indexOf(item) >= 0) {
+        basket.splice(basket.indexOf(item), 1);
+        return item;
     }
     return null;
 }
