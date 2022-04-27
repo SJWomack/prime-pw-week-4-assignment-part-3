@@ -17,10 +17,12 @@ function addItem(item) {
 
 console.log(addItem('blueberries')); //checking if true
 console.log(basket); //checking if item added
+addItem('pudding');
+addItem('soda');
 
 function listItems() {
-    for (let items of basket) {
-        console.log(`The items in your basket currently: ${basket}`);
+    for (let i=0; i<basket.length; i++) {
+        console.log(` ${basket[i]}: currently in your cart`);
     }
 }
 
